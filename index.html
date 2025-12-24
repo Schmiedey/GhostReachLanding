@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GhostReach - AI-powered Reddit prospecting platform. Turn real conversations into real leads with intelligent outreach that feels human.">
+    <title>GhostReach | AI-Powered Reddit Prospecting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+        <div class="grid-lines"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" opacity="0.3" />
+                    <circle cx="16" cy="16" r="10" fill="currentColor" opacity="0.1" />
+                    <path
+                        d="M12 14C12 12.8954 12.8954 12 14 12C15.1046 12 16 12.8954 16 14C16 15.1046 15.1046 16 14 16C12.8954 16 12 15.1046 12 14Z"
+                        fill="currentColor" />
+                    <path
+                        d="M16 14C16 12.8954 16.8954 12 18 12C19.1046 12 20 12.8954 20 14C20 15.1046 19.1046 16 18 16C16.8954 16 16 15.1046 16 14Z"
+                        fill="currentColor" />
+                    <path d="M11 20C11 20 12.5 22 16 22C19.5 22 21 20 21 20" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M8 10L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M24 10L26 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span class="logo-text">GhostReach</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://calendly.com/wesley-johnston97/30min" target="_blank" class="btn btn-ghost">Book a
+                    Call</a>
+                <a href="https://calendly.com/wesley-johnston97/30min" target="_blank" class="btn btn-primary">Get an
+                    Enquiry</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                <span>AI-Powered Reddit Prospecting</span>
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Turn Reddit Conversations<br>
+                <span class="gradient-text">Into Real Leads</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Stop lurking. Stop guessing. GhostReach finds high-intent prospects talking about
+                problems you solve—then helps you engage them naturally at scale.
+            </p>
+            <div class="hero-cta animate-fade-in-up delay-2">
+                <a href="https://calendly.com/wesley-johnston97/30min" target="_blank"
+                    class="btn btn-primary btn-large">
+                    Get an Enquiry
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#how-it-works" class="btn btn-ghost btn-large">
+                    See How It Works
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span><span class="stat-suffix">x</span>
+                    <span class="stat-label">Higher Response Rate</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="85">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Time Saved</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Leads Per Month</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-fade-in delay-2">
+            <div class="dashboard-preview">
+                <div class="preview-header">
+                    <div class="preview-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-title">GhostReach Dashboard</span>
+                </div>
+                <div class="preview-content">
+                    <div class="preview-sidebar">
+                        <div class="sidebar-item active" data-tab="dashboard" onclick="switchDemoTab('dashboard')">
+                            <svg class="sidebar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="sidebar-item" data-tab="prospects" onclick="switchDemoTab('prospects')">
+                            <svg class="sidebar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <circle cx="12" cy="12" r="8" />
+                            </svg>
+                            <span>Prospects</span>
+                        </div>
+                        <div class="sidebar-item" data-tab="campaigns" onclick="switchDemoTab('campaigns')">
+                            <svg class="sidebar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                            </svg>
+                            <span>Campaigns</span>
+                        </div>
+                        <div class="sidebar-item" data-tab="analytics" onclick="switchDemoTab('analytics')">
+                            <svg class="sidebar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
+                            </svg>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                    <div class="preview-main">
+                        <!-- Dashboard Tab -->
+                        <div class="demo-tab-content active" id="demo-dashboard">
+                            <div
+                                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px;">
+                                <div
+                                    style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.75rem; font-weight: 700; color: #fff;">247</div>
+                                    <div style="font-size: 0.75rem; color: #666;">Total Leads</div>
+                                </div>
+                                <div
+                                    style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.75rem; font-weight: 700; color: #4ade80;">89</div>
+                                    <div style="font-size: 0.75rem; color: #666;">Messages Sent</div>
+                                </div>
+                                <div
+                                    style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.75rem; font-weight: 700; color: #60a5fa;">28%</div>
+                                    <div style="font-size: 0.75rem; color: #666;">Response Rate</div>
+                                </div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px;">
+                                <div style="font-size: 0.875rem; color: #999; margin-bottom: 10px;">Recent Activity
+                                </div>
+                                <div
+                                    style="font-size: 0.8rem; color: #666; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✉️ Reply from u/startup_kate - 2m ago</div>
+                                <div
+                                    style="font-size: 0.8rem; color: #666; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    🎯 New lead scored 94 - 5m ago</div>
+                                <div style="font-size: 0.8rem; color: #666; padding: 8px 0;">📤 Campaign sent 12 DMs -
+                                    15m ago</div>
+                            </div>
+                        </div>
+                        <!-- Prospects Tab -->
+                        <div class="demo-tab-content" id="demo-prospects">
+                            <div class="prospect-cards">
+                                <div class="prospect-card" style="opacity: 1; animation: none;">
+                                    <div class="prospect-header">
+                                        <div class="prospect-avatar">JM</div>
+                                        <div class="prospect-info">
+                                            <span class="prospect-name">u/james_marketing</span>
+                                            <span class="prospect-sub">r/Entrepreneur</span>
+                                        </div>
+                                        <div class="prospect-score high">92</div>
+                                    </div>
+                                    <div class="prospect-snippet">"Looking for a tool to help with cold outreach..."
+                                    </div>
+                                </div>
+                                <div class="prospect-card" style="opacity: 1; animation: none;">
+                                    <div class="prospect-header">
+                                        <div class="prospect-avatar">SK</div>
+                                        <div class="prospect-info">
+                                            <span class="prospect-name">u/startup_kate</span>
+                                            <span class="prospect-sub">r/SaaS</span>
+                                        </div>
+                                        <div class="prospect-score high">88</div>
+                                    </div>
+                                    <div class="prospect-snippet">"Anyone know a good lead gen solution?"</div>
+                                </div>
+                                <div class="prospect-card" style="opacity: 1; animation: none;">
+                                    <div class="prospect-header">
+                                        <div class="prospect-avatar">TC</div>
+                                        <div class="prospect-info">
+                                            <span class="prospect-name">u/techceo_tom</span>
+                                            <span class="prospect-sub">r/startups</span>
+                                        </div>
+                                        <div class="prospect-score medium">74</div>
+                                    </div>
+                                    <div class="prospect-snippet">"Scaling outbound has been tough..."</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Campaigns Tab -->
+                        <div class="demo-tab-content" id="demo-campaigns">
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 3px solid #4ade80;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span style="font-weight: 600; color: #fff;">SaaS Outreach</span>
+                                    <span
+                                        style="font-size: 0.75rem; background: #4ade80; color: #000; padding: 2px 8px; border-radius: 4px;">Active</span>
+                                </div>
+                                <div style="font-size: 0.8rem; color: #666;">Min Score: 80+ • 127 sent • 28% reply rate
+                                </div>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 3px solid #60a5fa;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span style="font-weight: 600; color: #fff;">Startup Founders</span>
+                                    <span
+                                        style="font-size: 0.75rem; background: #60a5fa; color: #000; padding: 2px 8px; border-radius: 4px;">Active</span>
+                                </div>
+                                <div style="font-size: 0.8rem; color: #666;">Min Score: 75+ • 89 sent • 31% reply rate
+                                </div>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border-left: 3px solid #666;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span style="font-weight: 600; color: #fff;">B2B Services</span>
+                                    <span
+                                        style="font-size: 0.75rem; background: #666; color: #fff; padding: 2px 8px; border-radius: 4px;">Paused</span>
+                                </div>
+                                <div style="font-size: 0.8rem; color: #666;">Min Score: 85+ • 54 sent • 24% reply rate
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Analytics Tab -->
+                        <div class="demo-tab-content" id="demo-analytics">
+                            <div style="margin-bottom: 20px;">
+                                <div style="font-size: 0.875rem; color: #999; margin-bottom: 10px;">This Week</div>
+                                <div style="display: flex; gap: 10px; align-items: flex-end; height: 100px;">
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #4ade80, #22c55e); height: 60%; border-radius: 4px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #4ade80, #22c55e); height: 80%; border-radius: 4px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #4ade80, #22c55e); height: 45%; border-radius: 4px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #4ade80, #22c55e); height: 90%; border-radius: 4px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #4ade80, #22c55e); height: 70%; border-radius: 4px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #4ade80, #22c55e); height: 100%; border-radius: 4px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; background: linear-gradient(to top, #60a5fa, #3b82f6); height: 55%; border-radius: 4px;">
+                                    </div>
+                                </div>
+                                <div
+                                    style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #666; margin-top: 5px;">
+                                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                <div
+                                    style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.25rem; font-weight: 700; color: #4ade80;">+34%</div>
+                                    <div style="font-size: 0.7rem; color: #666;">vs last week</div>
+                                </div>
+                                <div
+                                    style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.25rem; font-weight: 700; color: #60a5fa;">$4.2k</div>
+                                    <div style="font-size: 0.7rem; color: #666;">Pipeline Value</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="logos-section">
+        <div class="container">
+            <p class="logos-title">Trusted by forward-thinking teams</p>
+            <div class="logos-grid">
+                <div class="logo-item">Startup Y</div>
+                <div class="logo-item">TechFlow</div>
+                <div class="logo-item">GrowthHub</div>
+                <div class="logo-item">ScaleUp Co</div>
+                <div class="logo-item">LeadMasters</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">The Problem</span>
+                <h2 class="section-title">Reddit Has Your Customers.<br>You Just Can't Find Them.</h2>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                    <h3>Manual Lurking Doesn't Scale</h3>
+                    <p>Hours spent scrolling through subreddits, hoping to find someone who needs what you offer. It's
+                        exhausting and inefficient.</p>
+                </div>
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+                            <rect x="9" y="3" width="6" height="4" rx="1" />
+                            <path d="M9 12h6M9 16h4" />
+                        </svg>
+                    </div>
+                    <h3>Generic Outreach Gets Ignored</h3>
+                    <p>Copy-pasted DMs and templated responses feel robotic. They get reported, ignored, or worse—your
+                        account gets banned.</p>
+                </div>
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>
+                    <h3>Volume Over Quality Fails</h3>
+                    <p>Blasting messages to hundreds of users wastes time on tire-kickers who were never going to buy in
+                        the first place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">Everything You Need To<br><span class="gradient-text">Dominate Reddit
+                        Outreach</span></h2>
+                <p class="section-subtitle">Intelligent prospecting, natural engagement, and scalable outreach—all in
+                    one platform.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card large animate-on-scroll">
+                    <div class="feature-visual">
+                        <div class="intent-scanner">
+                            <div class="scanner-line"></div>
+                            <div class="scanner-posts">
+                                <div class="scanner-post low">Low Intent</div>
+                                <div class="scanner-post medium">Medium</div>
+                                <div class="scanner-post high pulse">High Intent <svg width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg></div>
+                                <div class="scanner-post low">Noise</div>
+                                <div class="scanner-post high pulse">Hot Lead <svg width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3" />
+                                <circle cx="12" cy="12" r="7" />
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="2" x2="12" y2="4" />
+                                <line x1="12" y1="20" x2="12" y2="22" />
+                                <line x1="2" y1="12" x2="4" y2="12" />
+                                <line x1="20" y1="12" x2="22" y2="12" />
+                            </svg>
+                        </div>
+                        <h3>Intent-First Prospecting</h3>
+                        <p>Our AI scans Reddit in real-time, analyzing posts and comment histories to identify people
+                            actively looking for solutions like yours. No more guessing—only high-signal opportunities.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M12 2a4 4 0 014 4c0 1.5-.8 2.8-2 3.5v1.5h3a3 3 0 013 3v3.5c0 .8-.3 1.6-.9 2.1l-3.1 3.1V22H8v-.3l-3.1-3.1A3 3 0 014 16.5V14a3 3 0 013-3h3V9.5A4 4 0 018 6a4 4 0 014-4z" />
+                            <circle cx="9" cy="15" r="1" fill="currentColor" />
+                            <circle cx="15" cy="15" r="1" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Deep Semantic Analysis</h3>
+                    <p>Go beyond keywords. GhostReach understands context, urgency, and buying signals to score each
+                        prospect on conversion likelihood and decision-making authority.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="M2 2l7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Human-Like Messages</h3>
+                    <p>Every message is crafted using the prospect's own language and references their exact problem. No
+                        templates, no AI-speak—just natural conversations that get responses.</p>
+                </div>
+
+                <div class="feature-card animate-on-scroll centered">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M18 20V10" />
+                            <path d="M12 20V4" />
+                            <path d="M6 20v-6" />
+                            <path d="M3 20h18" />
+                        </svg>
+                    </div>
+                    <h3>Conversion Analytics</h3>
+                    <p>Track every metric that matters—response rates, conversion data, and ROI. Know exactly which
+                        subreddits and message styles drive results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">How It Works</span>
+                <h2 class="section-title">From Setup to Sales<br><span class="gradient-text">In Three Simple
+                        Steps</span></h2>
+            </div>
+            <div class="steps-container">
+                <div class="step animate-on-scroll">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Create Your Project</h3>
+                        <p>Set up a project with your target subreddits and keywords. Tell GhostReach what your ideal
+                            customer is looking for.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="profile-builder">
+                            <div class="profile-field">
+                                <span class="field-label">Subreddits</span>
+                                <span class="field-value">r/Entrepreneur, r/SaaS</span>
+                            </div>
+                            <div class="profile-field">
+                                <span class="field-label">Keywords</span>
+                                <div class="field-tags">
+                                    <span>cold outreach</span>
+                                    <span>lead gen</span>
+                                    <span>prospecting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="80" viewBox="0 0 40 80">
+                        <path d="M20 0 L20 80" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+                        <circle cx="20" cy="40" r="4" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>AI Finds & Scores Leads</h3>
+                        <p>Our scraper automatically searches your subreddits for matching posts and comments. Each lead
+                            gets an AI-powered score (0-100) based on how likely they are to be a high-intent customer.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="leads-stream">
+                            <div class="lead-notification">
+                                <span class="notif-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                    </svg>
+                                </span>
+                                <span>High-intent lead: u/marketing_mike</span>
+                                <span class="notif-score">94</span>
+                            </div>
+                            <div class="lead-notification">
+                                <span class="notif-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polygon
+                                            points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                                    </svg>
+                                </span>
+                                <span>AI Score: u/founder_sara</span>
+                                <span class="notif-score">89</span>
+                            </div>
+                            <div class="lead-notification">
+                                <span class="notif-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <circle cx="12" cy="12" r="8" />
+                                    </svg>
+                                </span>
+                                <span>Urgent need: u/cto_alex</span>
+                                <span class="notif-score">91</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="80" viewBox="0 0 40 80">
+                        <path d="M20 0 L20 80" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+                        <circle cx="20" cy="40" r="4" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Launch Your Campaign</h3>
+                        <p>Create a campaign with a minimum score filter (e.g., only leads 80+) and a message template
+                            with Spintax support. Our DM worker handles rate limits and sends messages automatically.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="message-preview">
+                            <div class="message-header">
+                                <span>Campaign Settings</span>
+                                <span class="message-status">Active</span>
+                            </div>
+                            <div class="message-body">
+                                <p>Min Score: <strong>80+</strong><br>
+                                    "{Hi|Hello} there! Saw your post about {topic}..."</p>
+                            </div>
+                            <div class="message-actions">
+                                <span class="action-btn primary" style="cursor: default;">● Active</span>
+                                <span class="action-btn secondary" style="cursor: default;">127 sent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="80" viewBox="0 0 40 80">
+                        <path d="M20 0 L20 80" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+                        <circle cx="20" cy="40" r="4" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Track Responses</h3>
+                        <p>GhostReach monitors your Reddit inbox automatically. When leads reply, it's logged in your
+                            dashboard with full analytics and activity tracking.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="leads-stream">
+                            <div class="lead-notification">
+                                <span class="notif-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                                    </svg>
+                                </span>
+                                <span>Reply from u/marketing_mike</span>
+                                <span class="notif-score">✓</span>
+                            </div>
+                            <div class="lead-notification">
+                                <span class="notif-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                </span>
+                                <span>Response rate: 28%</span>
+                                <span class="notif-score">📈</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">Loved by Founders<br><span class="gradient-text">& Growth Teams</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"GhostReach changed how we think about Reddit. We went from random posting to predictable
+                            pipeline. 40+ qualified leads in our first month."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <span class="author-name">Michael Roberts</span>
+                            <span class="author-title">Founder, ScaleStack</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The semantic scoring is insane. It actually understands context and filters out noise. Our
+                            response rate jumped from 3% to 28%."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Kim</span>
+                            <span class="author-title">Head of Growth, Launchpad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"We replaced two SDRs with GhostReach. Not to cut costs—they're now focused on closing
+                            instead of prospecting. Game changer."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DT</div>
+                        <div class="author-info">
+                            <span class="author-name">David Thompson</span>
+                            <span class="author-title">CEO, B2B Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing</span>
+                <h2 class="section-title">Simple, Transparent<br><span class="gradient-text">Pricing</span></h2>
+                <p class="section-subtitle">Start free. Scale as you grow. No hidden fees.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <p class="plan-desc">Perfect for testing the waters</p>
+                        <div class="plan-price">
+                            <span class="price">$0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> 50 prospect scans/month</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> 10 AI-crafted messages</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> 3 subreddits monitored</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Basic analytics</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Email support</li>
+                    </ul>
+                    <a href="https://calendly.com/wesley-johnston97/30min" target="_blank"
+                        class="btn btn-ghost btn-full">Get an Enquiry</a>
+                </div>
+                <div class="pricing-card featured animate-on-scroll">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Pro</h3>
+                        <p class="plan-desc">For serious prospectors</p>
+                        <div class="plan-price">
+                            <span class="price">$79</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> 500 prospect scans/month</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> 100 AI-crafted messages</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Unlimited subreddits</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Advanced semantic scoring</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Priority support</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> CRM integrations</li>
+                    </ul>
+                    <a href="https://calendly.com/wesley-johnston97/30min" target="_blank"
+                        class="btn btn-primary btn-full">Get an Enquiry</a>
+                </div>
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <p class="plan-desc">For teams at scale</p>
+                        <div class="plan-price">
+                            <span class="price">Custom</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Unlimited everything</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Multi-account management</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Custom AI training</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Dedicated success manager</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> SLA & priority support</li>
+                        <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3">
+                                <polyline points="20,6 9,17 4,12" />
+                            </svg> Custom integrations</li>
+                    </ul>
+                    <a href="https://calendly.com/wesley-johnston97/30min" target="_blank"
+                        class="btn btn-ghost btn-full">Get an Enquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Ready to Turn Reddit Into<br><span class="gradient-text">Your #1 Lead Channel?</span></h2>
+                <p>Join hundreds of founders and growth teams using GhostReach to find and convert high-intent
+                    prospects.</p>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/wesley-johnston97/30min" target="_blank"
+                        class="btn btn-primary btn-large">
+                        Get an Enquiry
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="https://calendly.com/wesley-johnston97/30min" target="_blank"
+                        class="btn btn-ghost btn-large">Book a Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" opacity="0.3" />
+                            <circle cx="16" cy="16" r="10" fill="currentColor" opacity="0.1" />
+                            <path
+                                d="M12 14C12 12.8954 12.8954 12 14 12C15.1046 12 16 12.8954 16 14C16 15.1046 15.1046 16 14 16C12.8954 16 12 15.1046 12 14Z"
+                                fill="currentColor" />
+                            <path
+                                d="M16 14C16 12.8954 16.8954 12 18 12C19.1046 12 20 12.8954 20 14C20 15.1046 19.1046 16 18 16C16.8954 16 16 15.1046 16 14Z"
+                                fill="currentColor" />
+                            <path d="M11 20C11 20 12.5 22 16 22C19.5 22 21 20 21 20" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                            <path d="M8 10L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M24 10L26 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <span class="logo-text">GhostReach</span>
+                    </a>
+                    <p>AI-powered Reddit prospecting that turns conversations into customers.</p>
+                    <div class="social-links">
+                        <a href="https://x.com/GhostReachAI0" target="_blank" aria-label="X (Twitter)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GhostReach. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
