@@ -21,7 +21,7 @@ function initParticleSystem() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
 
-    const particleCount = 50;
+    const particleCount = 100;
 
     for (let i = 0; i < particleCount; i++) {
         createParticle(particlesContainer, i);
@@ -33,19 +33,20 @@ function createParticle(container, index) {
     particle.className = 'particle';
 
     // Random properties
-    const size = Math.random() * 3 + 1;
+    const size = Math.random() * 2 + 1;
     const left = Math.random() * 100;
-    const delay = Math.random() * 20;
-    const duration = Math.random() * 20 + 15;
-    const opacity = Math.random() * 0.5 + 0.2;
+    const top = Math.random() * 100;
+    const floatDelay = Math.random() * 25;
+    const twinkleDelay = Math.random() * 5;
+    const opacity = Math.random() * 0.5 + 0.3;
 
     particle.style.cssText = `
         left: ${left}%;
+        top: ${top}%;
         width: ${size}px;
         height: ${size}px;
-        animation-delay: -${delay}s;
-        animation-duration: ${duration}s;
         opacity: ${opacity};
+        animation-delay: -${floatDelay}s, -${twinkleDelay}s;
     `;
 
     container.appendChild(particle);
